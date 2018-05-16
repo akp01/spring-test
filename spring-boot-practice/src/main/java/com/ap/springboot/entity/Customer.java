@@ -6,25 +6,51 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
 @Entity
 public class Customer {
 	@Id
-    //@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="CUST_SEQ")
-	 @GeneratedValue(strategy=GenerationType.AUTO)
-    @Column(name="CUST_ID")
+	// @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="CUST_SEQ")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "CUST_ID")
 	private Long customerId;
-	
-	@Column(name="CUST_NAME", nullable = false, unique = true)
+
+	@Column(name = "CUST_NAME", nullable = false, unique = true)
 	private String name;
+	@Column
 	private String address1;
+	@Column
 	private String address2;
+	@Column
 	private String city;
+	@Column
 	private String state;
+	@Column
 	private String zipCode;
+	@Column
 	private String phone;
+	@Column
 	private String email;
+	@Column
 	private Integer spendingLimit;
+	
+	public Customer() {
+		super();
+	}
+
+	public Customer(String name, String address1, String address2, String city, String state, String zipCode,
+			String phone, String email, Integer spendingLimit) {
+		super();
+		this.name = name;
+		this.address1 = address1;
+		this.address2 = address2;
+		this.city = city;
+		this.state = state;
+		this.zipCode = zipCode;
+		this.phone = phone;
+		this.email = email;
+		this.spendingLimit = spendingLimit;
+	}
+
 
 	public Long getCustomerId() {
 		return customerId;
