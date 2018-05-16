@@ -53,12 +53,12 @@ public class ApplicationInitializer implements CommandLineRunner {
 	private List<Customer> getMockProductsJP() {
 
 		List<Customer> customers = new ArrayList<>();
-		customers.add(new Customer("Ashok", "address1", "address2", "Iselin", "NJ", "08810", "2312312312", "abc@xyz.com", 5000));
-		customers.add(new Customer("Ashok1", "address1", "address2", "Iselin", "NJ", "08810", "2312312312", "abc@xyz.com", 5000));
-		customers.add(new Customer("Ashok2", "address1", "address2", "Iselin", "NJ", "08810", "2312312312", "abc@xyz.com", 5000));
-		customers.add(new Customer("Ashok3", "address1", "address2", "Iselin", "NJ", "08810", "2312312312", "abc@xyz.com", 5000));
-		customers.add(new Customer("Ashok4", "address1", "address2", "Iselin", "NJ", "08810", "2312312312", "abc@xyz.com", 5000));
-		customers.add(new Customer("Ashok5", "address1", "address2", "Iselin", "NJ", "08810", "2312312312", "abc@xyz.com", 5000));
+		customers.add(new Customer("Ashok", "address1", "address2", "Iselin", "NJ", "08810", "2312312312", "abc@xyz.com", 4000));
+		customers.add(new Customer("Rajeev", "address1", "address2", "Iselin", "NJ", "08810", "2312312312", "abc@xyz.com", 3000));
+		customers.add(new Customer("Sameer", "address1", "address2", "Iselin", "NJ", "08810", "2312312312", "abc@xyz.com", 7000));
+		customers.add(new Customer("Amit", "address1", "address2", "Iselin", "NJ", "08810", "2312312312", "abc@xyz.com", 9000));
+		customers.add(new Customer("Kunal", "address1", "address2", "Iselin", "NJ", "08810", "2312312312", "abc@xyz.com", 2000));
+		customers.add(new Customer("Paresh", "address1", "address2", "Iselin", "NJ", "08810", "2312312312", "abc@xyz.com", 11000));
 		return customers;
 	}
 
