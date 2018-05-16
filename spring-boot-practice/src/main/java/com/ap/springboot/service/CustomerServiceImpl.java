@@ -18,7 +18,6 @@ public class CustomerServiceImpl implements CustomerServiceInterface {
 
 	@Override
 	public List<CustomerInfo> getCustomers() {
-		// TODO Auto-generated method stub
 		List<Customer> customers = customerRepository.findAll();
 		
 		List<CustomerInfo> customerInfoDetails = new ArrayList<>();

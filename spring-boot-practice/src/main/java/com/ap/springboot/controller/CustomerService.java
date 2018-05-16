@@ -36,7 +36,7 @@ public class CustomerService {
 		//return getCustomersMock();
 	}
 	
-	@GetMapping(value = "customers/{customerId}")
+	@GetMapping(value = "customers/{customerId}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public CustomerInfo getCustomer(@PathVariable("customerId") Long customerId) {
 		
 		return customerServiceImpl.getCustomer(customerId);
