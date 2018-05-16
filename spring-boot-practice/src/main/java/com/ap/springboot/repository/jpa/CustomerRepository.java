@@ -1,4 +1,4 @@
-package com.ap.springboot.repository;
+package com.ap.springboot.repository.jpa;
 
 import java.util.List;
 import java.util.Optional;
