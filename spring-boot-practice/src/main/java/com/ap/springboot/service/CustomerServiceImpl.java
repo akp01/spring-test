@@ -2,8 +2,6 @@ package com.ap.springboot.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -61,7 +59,28 @@ public class CustomerServiceImpl implements CustomerServiceInterface {
 		info.setEmail(cust.getEmail());
 		info.setPhone(cust.getPhone());
 		info.setZipCode(cust.getZipCode());
-		return null;
+		return info;
+	}
+
+	@Override
+	public CustomerInfo createCustomer(CustomerInfo customer) {
+		
+		Customer info = new Customer();
+		info.setCustomerId(customer.getCustomerId());
+		info.setName(customer.getName());
+		info.setAddress1(customer.getAddress1());
+		info.setAddress2(customer.getAddress2());
+		info.setCity(customer.getCity());
+		info.setState(customer.getState());
+		info.setEmail(customer.getEmail());
+		info.setPhone(customer.getPhone());
+		info.setZipCode(customer.getZipCode());
+		
+		Customer cust = customerRepository.save(info);
+		
+		customer.setCustomerId(cust.getCustomerId());
+		return customer;
+		
 	}
 
 }

@@ -9,5 +9,7 @@ public interface CustomerServiceInterface {
 	public List<CustomerInfo> getCustomers();
 
 	public CustomerInfo getCustomer(Long customerId);
+	
+	public CustomerInfo createCustomer(CustomerInfo customer);
 
 }
