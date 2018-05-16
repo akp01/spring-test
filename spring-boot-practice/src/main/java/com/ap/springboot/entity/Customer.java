@@ -1,7 +1,21 @@
-package com.ap.springboot.bean;
+package com.ap.springboot.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
+@Entity
 public class Customer {
-	private String customerId;
+	@Id
+    //@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="CUST_SEQ")
+	 @GeneratedValue(strategy=GenerationType.AUTO)
+    @Column(name="CUST_ID")
+	private Long customerId;
+	
+	@Column(name="CUST_NAME", nullable = false, unique = true)
 	private String name;
 	private String address1;
 	private String address2;
@@ -12,25 +26,11 @@ public class Customer {
 	private String email;
 	private Integer spendingLimit;
 
-	public Customer(String name, String address1, String address2, String city, String state, String zipCode,
-			String phone, String email, Integer spendingLimit) {
-		super();
-		this.name = name;
-		this.address1 = address1;
-		this.address2 = address2;
-		this.city = city;
-		this.state = state;
-		this.zipCode = zipCode;
-		this.phone = phone;
-		this.email = email;
-		this.spendingLimit = spendingLimit;
-	}
-
-	public String getCustomerId() {
+	public Long getCustomerId() {
 		return customerId;
 	}
 
-	public void setCustomerId(String customerId) {
+	public void setCustomerId(Long customerId) {
 		this.customerId = customerId;
 	}
 
