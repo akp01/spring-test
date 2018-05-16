@@ -39,8 +39,8 @@ public class CustomerService {
 	@GetMapping(value = "customers/{customerId}")
 	public CustomerInfo getCustomer(@PathVariable("customerId") Long customerId) {
 		
-		//return customerServiceImpl.getCustomer(customerId);
-		return getCustomerMock();
+		return customerServiceImpl.getCustomer(customerId);
+		//return getCustomerMock();
 	}
 	
 	
