@@ -1,7 +1,7 @@
 package com.ap.springboot.bean;
 
-public class Customer {
-	private String customerId;
+public class CustomerInfo {
+	private Long customerId;
 	private String name;
 	private String address1;
 	private String address2;
@@ -11,8 +11,12 @@ public class Customer {
 	private String phone;
 	private String email;
 	private Integer spendingLimit;
+	
+	public CustomerInfo() {
+		super();
+	}
 
-	public Customer(String name, String address1, String address2, String city, String state, String zipCode,
+	public CustomerInfo(String name, String address1, String address2, String city, String state, String zipCode,
 			String phone, String email, Integer spendingLimit) {
 		super();
 		this.name = name;
@@ -26,11 +30,11 @@ public class Customer {
 		this.spendingLimit = spendingLimit;
 	}
 
-	public String getCustomerId() {
+	public Long getCustomerId() {
 		return customerId;
 	}
 
-	public void setCustomerId(String customerId) {
+	public void setCustomerId(Long customerId) {
 		this.customerId = customerId;
 	}
 
